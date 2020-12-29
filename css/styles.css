@@ -9,12 +9,16 @@
     --very-light-gray: hsl(0, 0%, 98%);
   }
   
-  *, *::after, *::before {
+  html{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    scroll-behavior: smooth;
   }
-  
+  *, *:before, *:after  {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
   body {
     box-sizing: inherit;
     line-height: 1.6;
@@ -57,13 +61,14 @@ nav {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
 }
 nav img {
   width: 11.1%;
   height: 25%;
   margin-top: auto;
   margin-bottom: auto;
+  color: var(--primary-color);
 }
 nav ul {
   flex-basis: 45%;
@@ -84,6 +89,7 @@ nav ul a:hover, nav ul a:active {
   padding: 5px 20px;
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
+  text-transform: uppercase;
 }
 .button:hover, .button:active {
   background-color: var(--primary-color);
@@ -93,6 +99,42 @@ nav ul a:hover, nav ul a:active {
 
   /* HERO
 ********************/
+header {
+  background-color: var(--primary-color);
+  color: var(--very-light-gray);
+  height: 560px;
+}
+header .button {
+  display: inline-block;
+  font-weight: 700;
+  padding: 5px 20px;
+  border: 2px solid var(--very-light-gray);
+  color: var(--very-light-gray);
+}
+header .button:hover, .button:active {
+  background-color: var(--very-light-gray);
+  color: var(--primary-color);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: black; */
+  height: 560px;
+  padding-top: 100px;
+}
+header .container div:first-of-type {
+  flex-basis: 50%;
+  padding-top: 50px;
+}
+.section-title {
+  font-size: 4.2rem;
+  font-weight: 400;
+  width: 500px;
+  line-height: 1;
+}
+header img {
+  
+}
 
   /* DESCRIPTION
 ********************/
